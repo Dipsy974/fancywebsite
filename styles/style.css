@@ -9,10 +9,20 @@ body {
   background: #17181a;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  position: relative;
+}
+
+body.hide {
+  overflow: hidden;
+}
+
+main {
+  position: absolute;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 header h1 a {
@@ -40,6 +50,8 @@ header h1 a {
   width: 80%;
   margin: auto;
   padding: 2rem 0rem;
+  z-index: 3;
+  position: relative;
 }
 
 .line1,
@@ -278,5 +290,141 @@ header h1 a {
 
 .t-swipe3 {
   background: #ff8b5d;
+}
+
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.swipe1 {
+  background: #a76ee7;
+  z-index: 5;
+}
+
+.swipe2 {
+  background: #ff8b5d;
+  z-index: 4;
+}
+
+.swipe3 {
+  background: #567ce4;
+  z-index: 3;
+}
+
+/* Other page */
+.detail-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 90vh;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  margin-top: 5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.fashion-img {
+  -ms-flex-preferred-size: 30rem;
+      flex-basis: 30rem;
+  min-height: 70vh;
+}
+
+.fashion-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fashion-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 25rem;
+      flex-basis: 25rem;
+  position: relative;
+}
+
+.fashion-text h1 {
+  font-size: 5rem;
+  padding: 5rem 0rem;
+}
+
+.fashion-text p {
+  font-size: 2rem;
+  padding: 2rem 2rem 2rem 0rem;
+  margin-bottom: 10rem;
+}
+
+.fashion1 h1 {
+  color: #ff8b5d;
+}
+
+.fashion2 h1 {
+  color: #a76ee7;
+}
+
+.fashion3 h1 {
+  color: #567ce4;
+}
+
+.fashion-nb {
+  font-size: 10rem;
+  position: absolute;
+  opacity: 0.8;
+  color: white;
+  left: 60%;
+  bottom: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-description {
+    padding: 0;
+  }
+  .hero-description h2 {
+    font-size: 1.6rem;
+    padding: 1rem 0rem;
+  }
+  .hero-description p {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  .hero-img {
+    padding-top: 4rem;
+  }
+  .explore {
+    width: 60%;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

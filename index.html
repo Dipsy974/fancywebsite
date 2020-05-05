@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Fancy Website</title>
   </head>
-  <body>
+  <body data-barba="wrapper">
     <header class="nav-header">
       <h1><a id="logo" href="./index.html">days.</a></h1>
       <div class="burger">
@@ -18,7 +18,7 @@
         <div class="line2"></div>
       </div>
     </header>
-    <main>
+    <main data-barba="container" data-barba-namespace="home">
       <section class="mountain slide">
         <div class="hero-img">
           <img src="./img/forest.png" alt="forest image" />
@@ -76,7 +76,7 @@
             suscipit? Quos numquam quae iusto facere delectus nam, libero
             beatae?
           </p>
-          <a class="explore fashion-exp">Explore</a>
+          <a class="explore fashion-exp" href="./fashion/index.html">Explore</a>
           <div class="reveal-text"></div>
         </div>
       </section>
@@ -121,6 +121,7 @@
       integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw="
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/@barba/core"></script>
     <script src="./apps/app.js"></script>
   </body>
 </html>
